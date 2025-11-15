@@ -1,0 +1,508 @@
+:root {
+    --primary: #eae3d2;
+    /* Primary Color 60% */
+    --text-main: #213448;
+    /* Main Text */
+    --color-accent: #94b4c1;
+    /* Accent Color 10% */
+    --color-accent-hover: #547792;
+    /* Hover/Highlights */
+    --color-secondary-1: #d9cdae;
+    /* Secondary 1 */
+    --color-secondary-2: #b89a67;
+    /* Secondary 2 */
+    --font-headline: "Raleway", sans-serif;
+    /* Headline Font */
+    --font-body: "Roboto", sans-serif;
+    /* Body Font */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--text-main);
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* Navb */
+
+.navbar {
+    position: sticky;
+    z-index: 20;
+    border-radius: 30px;
+    margin: 1rem 5rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 2rem;
+}
+
+.logo {
+    max-width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+}
+
+.name {
+    font-family: var(--font-headline);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    flex-grow: 1;
+    margin: 0;
+}
+
+.button {
+    font-family: var(--font-headline);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.6rem 1.25rem;
+    border: none;
+    border-radius: 30px;
+    background: rgba(148, 180, 193, 0.5);
+    box-shadow:
+        inset 1px 1px 1px rgba(255, 255, 255, 0.7),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.05),
+        0 0 0 1px rgba(148, 180, 193, 0.4),
+        0 0 8px rgba(148, 180, 193, 0.2);
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.button:hover {
+  background: rgba(84, 119, 146, 0.5);
+  box-shadow:
+    inset 1px 1px 1px rgba(255, 255, 255, 0.7),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(84, 119, 146, 0.6),
+    0 0 15px rgba(84, 119, 146, 0.4);
+  color: var(--primary);
+  
+  /* We merged the "lift" animation into this one rule */
+  transform: translateY(-2px);
+}
+
+/* Content */
+
+.page-container {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.hero-section {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.left_content {
+    width: 50%;
+}
+
+.title {
+    font-family: var(--font-headline);
+    font-size: 3rem;
+    font-weight: 650;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-family: var(--font-body);
+    font-size: 2.25rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.right_content {
+    padding-left: 5rem;
+    width: 50%;
+}
+
+.pitchline {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.cta-headline {
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.email-form input {
+    width: 100%;
+    border: none;
+    background: none;
+    box-shadow: inset 1px 1px 1px rgba(217, 205, 174, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.05),
+        inset 1px 1px 4px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    color: var(--text-main);
+    -webkit-text-fill-color: rgba(33, 52, 72, 0.745);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    resize: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.email-form input:focus {
+    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.164),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.05),
+        inset 1px 1px 4px rgba(255, 255, 255, 0.05),
+        0 2px 20px rgba(84, 119, 146, 0.121);
+}
+
+.email-form input:-webkit-autofill,
+.email-form input:-webkit-autofill:hover,
+.email-form input:-webkit-autofill:focus {
+    background-color: transparent !important;
+    -webkit-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.7),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.05),
+        inset 1px 1px 4px rgba(255, 255, 255, 0.05),
+        0 2px 20px rgba(84, 119, 146, 0.3);
+    -webkit-text-fill-color: var(--text-main) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.notify {
+    border-radius: 15px;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-headline);
+    font-size: 1rem;
+    color: var(--text-main);
+    margin: 2rem 5rem 0 5rem;
+    border-top: 1px solid var(--color-secondary-1);
+    padding: 1.5rem 0 0 0;
+}
+
+.name-title {
+    text-align: left;
+}
+
+.footer-title {
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.footer-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.cw-claim {
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.social-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    font-size: 1.3rem;
+}
+
+.social-links a:hover {
+    color: var(--color-accent-hover);
+}
+
+/* 5. Laptops & Desktops (1199.98px and down)
+*/
+
+@media (max-width: 1199.98px) {
+    .navbar {
+        margin: 1rem 3rem;
+    }
+
+    .page-container {
+        padding: 0 3rem;
+    }
+
+    .hero-section {
+        padding: 4rem;
+    }
+
+    .right_content {
+        padding-left: 3rem;
+    }
+
+    .footer {
+        margin: 2rem 3rem 0 3rem;
+    }
+
+    .social-links {
+        gap: 3rem;
+    }
+}
+
+/* 4. Landscape Tablets & Small Laptops (991.98px and down)
+*/
+
+@media (max-width: 991.98px) {
+    .navbar {
+        margin: 1rem 2rem;
+    }
+
+    .page-container {
+        padding: 0 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.75rem;
+    }
+
+    .right_content {
+        padding-left: 2rem;
+    }
+
+    .pitchline {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-headline {
+        font-size: 1.25rem;
+    }
+
+    .footer {
+        margin: 2rem 2rem 0 2rem;
+    }
+}
+
+/* 3. Portrait Tablets & Large Phones (767.98px and down)
+*/
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        /* Stack left/right content vertically */
+        flex-direction: column;
+        align-items: flex-start;
+        /* Change fixed height to be flexible */
+        height: auto;
+        min-height: 500px;
+        padding: 3rem 2.5rem;
+    }
+
+    .left_content {
+        width: 100%;
+    }
+
+    .right_content {
+        width: 100%;
+        /* Remove the large left padding */
+        padding-left: 0;
+        /* Add space between the stacked blocks */
+        padding-top: 2.5rem;
+    }
+
+    .email-form {
+        /* Stack the input and button */
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .footer {
+        /* Stack footer content */
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .name-title {
+        text-align: center;
+    }
+}
+
+/* 2. Mobile (575.98px and down)
+*/
+
+@media (max-width: 575.98px) {
+    .navbar {
+        margin: 1rem;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .page-container {
+        padding: 0 1rem;
+    }
+
+    .hero-section {
+        padding: 3rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    .title {
+        font-size: 2.1rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .pitchline {
+        font-size: 1rem;
+    }
+
+    .footer {
+        margin: 2rem 1rem 0 1rem;
+    }
+
+    .social-links {
+        gap: 2.5rem;
+    }
+}
+
+
+/* Animations */
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    /* This is the animation itself. We use 'transition'
+    to smoothly animate any changes to opacity and transform.
+  */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+.delay-400 {
+    transition-delay: 400ms;
+}
+
+.delay-500 {
+    transition-delay: 500ms;
+}
+
+
+
+/*
+   HERO BACKGROUND ANIMATION
+/*
+
+1. This creates the looping zoom animation */
+@keyframes infiniteZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+        /* A subtle 5% zoom */
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 2. This creates a new "virtual" element
+   that holds our background image
+*/
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* Puts it behind the content */
+
+    /* 3. We move your background properties here */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(217, 205, 174, 0.825)),
+        url('images/bgimage.jpeg');
+    background-size: cover;
+    background-position: center;
+
+    /* 4. This applies the animation */
+    animation: infiniteZoom 20s ease-in-out infinite;
+}
