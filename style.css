@@ -86,17 +86,17 @@ body {
 }
 
 .button:hover {
-  background: rgba(84, 119, 146, 0.5);
-  box-shadow:
-    inset 1px 1px 1px rgba(255, 255, 255, 0.7),
-    inset -1px -1px 1px rgba(0, 0, 0, 0.1),
-    inset -1px -1px 1px rgba(0, 0, 0, 0.05),
-    0 0 0 1px rgba(84, 119, 146, 0.6),
-    0 0 15px rgba(84, 119, 146, 0.4);
-  color: var(--primary);
-  
-  /* We merged the "lift" animation into this one rule */
-  transform: translateY(-2px);
+    background: rgba(84, 119, 146, 0.5);
+    box-shadow:
+        inset 1px 1px 1px rgba(255, 255, 255, 0.7),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.05),
+        0 0 0 1px rgba(84, 119, 146, 0.6),
+        0 0 15px rgba(84, 119, 146, 0.4);
+    color: var(--primary);
+
+    /* We merged the "lift" animation into this one rule */
+    transform: translateY(-2px);
 }
 
 /* Content */
@@ -107,15 +107,15 @@ body {
 }
 
 .hero-section {
-  width: 100%;
-  height: 550px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 30px;
-  padding: 5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
 }
 
 .left_content {
@@ -391,8 +391,18 @@ body {
         margin: 1rem;
     }
 
+    .logo {
+        max-width: 35px;
+        height: 35px;
+    }
+
     .name {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .button {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
     }
 
     .page-container {
