@@ -526,7 +526,7 @@ body {
             rgba(217, 205, 174, 0.825)),
         url("images/bgimage.jpeg");
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
 
     /* 4. This applies the animation */
     animation: infiniteZoom 20s ease-in-out infinite;
